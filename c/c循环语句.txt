@@ -1,0 +1,63 @@
+#include<stdio.h>
+int main()
+{
+	int a,b,c=0;
+	for (a=1;b<=50;a++)
+	{
+		c=c+a;
+	}
+	printf("%d",s);
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	double a,b=1,s=0;
+	do
+	{
+		a=1/b;
+		s=s+a;
+		b++;
+	}
+		while (a>=0.02);
+	printf("%lf",s);
+	return 0;
+}
+
+
+#include<stdio.h>
+int main()
+{
+	double r=0.5,s=0,pi=3.1416;
+	do
+	{
+		s=r*r*pi;
+		printf("当r为%3.1f时其面积为%lf\n",r,s);
+			r=r+0.5;
+	}
+	while (r<=2.5);
+	return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+	double r=0.5,s=0,pi=3.1416;
+	for(;r<=2.5;s=r*r*pi,printf("当半径为%lf时，其面积为%lf\n",r,s),r+=0.5);
+	return 0;
+}
+
+
+
+#include<stdio.h>
+int main()
+{
+	int a,b;
+	for(a=1;a<=9;a++)
+	{
+	for(b=1;b<=9;b++)
+	printf("%d*%1d=%2d  ",a,b,a*b);
+	printf("\n");
+}
+	return 0;
+}

@@ -1,0 +1,284 @@
+	int a, b,c ;
+	printf("输入第一个数:\n");        //输入两个数，输出其和
+	scanf("%d", &a);
+	printf("输入第二个数:\n");
+	scanf("%d", &b);
+	c = a + b;
+	printf("输入的第一个数为a=%d\n", a);
+	printf("输入的第二个数为b=%d\n", b);
+	printf("它们的和为c=%d\n",c);
+
+  int a,b,c,d;
+    printf("请输入第一个数\n");          //输入三数，计算 （a+b）%c
+    scanf_s("%d",&a）;
+    printf("请输入第二个数\n");
+    scanf_s("%d",&b);
+    printf("请输入第三个数\n");
+    scanf_s("%d",&c);
+    d=(a+b)/c;
+    printf("最后的结果为%d",c);
+
+     char a,b,c;                                                     //输入一个大写字母，输出其小写字母
+     scanf("%c,%c,%c",&a,&b,&c)        
+     a=a+32;
+     b=b+32;
+     c=c+32;
+     printf("依此输出的小写字母为%c,%c,%c",a,b,c);
+
+
+#include<stdio.h>
+int main()
+{
+    printf("请依此输入三个大写字母\n");             //使用getchar putchar 输入输出
+    char a, b,c;
+    a = getchar();
+    b = getchar();
+    c = getchar();
+    a = a + 32;
+    b = b + 32;
+    c = c + 32;
+    printf("它们的小写字母依次是\n");
+    putchar(a);
+    putchar(b);
+    putchar(c);
+    putchar('\n');
+    return 0;
+}
+
+abs(x)=int x,|x|  整数
+fabs(x)=double x,|x| 所有数
+sin cos tan double  x=sin cos tan (x)
+exp x=double x   exp(x)  x*x
+pow  double x,y pow(x,y); x的y次方
+log double x     log(x)   log10 double x   log10(x);
+sqrt double x  sqrt(x)  根号x
+ 
+
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+ double a,b,c,d,s;
+printf("请输入三角形的三边长\n");        //使用数学函数#incldue<math.h> 进行计算
+scanf("%lf,%lf,%lf",&a,&b,&c);
+s=(a+b+c)/2;
+d=sqrt(s*(s-a)*(s-b)*(s-c));
+printf("该三角形的面积为%lf\n",d);
+return 0;
+}
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+printf("请输入三角形的三边长\n");
+double a,b,c,d,e;
+scanf("%lf,%lf,%lf",&a,&b,&c);
+d=(a+b+c)/2;
+return 0;
+}
+
+#include<stdio.h>
+void butle(void);//先使用该函数 
+int main()
+{
+	int mun;
+	mun=1;
+	printf("I am asimple "); /*这是一个注释*/
+	butle(); //中途插入 
+	printf("computer.\n");
+	printf("My favorite number is %d because it is first.\n",mun); //这也是一个注释 
+	getchar();
+	return 0;
+ } 
+ void butle(void)
+ {
+ 		printf("大大大");
+ }
+
+#include<stdio.h>
+int main(void)
+{
+    double a;
+    int b, c, d;
+    printf("请输入一个0-999可以带小数的数\n");
+    scanf_s("%lf", &a);
+    b = (int)(a / 100);
+    c = (int)((a - b * 100) / 10);
+    d = (int)((a - b * 100 - c * 10) / 1);
+    printf("该数的百位数为%d\n", b);
+    printf("该数的十位数为%d\n", c);
+    printf("该数的个位数为%d\n", d);
+    return 0;
+}
+
+#include<stdio.h>
+int main(void)
+{
+	int x, b;
+	printf("请输入一个整数X\n");
+	scanf_s("%d", &x);
+	if (x < 0)
+		b = -1;
+	else if (x > 0)
+		b = 1;
+	else
+		b = x;
+	printf("Y的值为%d", b);
+    return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+double a,b,c;
+printf("请输入a，b的值:\n");
+scanf("%lf%lf",&a,&b);
+if (a>b)
+{
+c=a;
+a=b;
+b=c;
+}
+printf("a,b从小到大的顺序依次是%lf,%lf\n",a,b);
+return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+int a,;
+printf("请输入年份");
+scanf("%d",&a);
+if (a%100!=0&&a%4==0)||a%400==0;     //需要使用% 不能用/
+{
+printf("该年为闰年");
+}
+lese
+{
+printf("该年不是闰年");
+}
+return 0;
+}
+#include<stdio.h>
+int main()
+{
+	char a,b;
+	printf("请输入一个字母\n");
+	scanf("%c",&a);
+	b=a;
+	if (a>='A'&&a<='Z')
+	a=a+32;
+	printf("%c\n",a);	
+	return 0;
+}
+表达式1？表达式2：表达式3  如 a=(a>='A'&&a<='Z')?(a+32):a;
+
+#include<stdio.h>
+int main()
+{
+	double a, b;
+	printf("请输入a的值\n");
+	scanf_s("%lf", &a);
+	printf("请输入b的值\n");                                                   //这是不使用if语句编写从小到大顺序数字
+	scanf_s("%lf", &b);
+	a > b ? printf("%lf,%lf\n", b, a) : printf("%lf,%lf\n", a, b);
+	return 0;
+}
+
+	int i,j,m,n;
+	i=8;
+	j=10;
+	m=i++;
+	n=j++;
+	printf("%d,%d,%d,%d\n",i,j,m,n);     //这是不使用数学函数用if语句编写y=|x|+1
+	return 0; 
+	double x,y;
+	printf("请输入x的值\n");
+	scanf("%lf",&x);
+	if (x>0) 
+	y=x+1;
+	else if (x<0)
+	y=(-1*x)+1;
+	else 
+	y=1;
+	printf("y的值为%lf\n",y);
+
+
+	float a, b, c, d;
+	printf("请输入三个数\n");
+	scanf_s("%f%f%f", &a, &b, &c);       //该程序是用if语句从大到小输出a,b,c三数
+	if (a < b)
+	{
+		d = a;
+		a = b;
+		b = d;
+	}
+	 if (a < c)
+	{
+		d = a;
+		a = c;
+		c = d;
+	}
+	 if (b < c)
+	{
+		d = b;
+		b = c;
+		c = d;
+	}
+	printf("它们从大到小的顺序为%f,%f,%f\n",a,b,c);
+
+	float a;
+	printf("请输入分数\n");      //输入分数判断等级，使用if嵌套语句
+	scanf("%f",&a);
+	if (a>=60)
+	if (a>=80)=
+	printf("优秀\n");
+	else
+	printf("及格\n");
+	else 
+	printf("不及格\n");
+
+
+
+swtich    语句      ease   :代码；break;    //非数字要ease'  '之间输入
+default :代码;
+
+	int a;
+	printf("请输入一个整数\n");  //如此题
+	scanf("%d",&a);
+	switch (a)
+	{
+	case 1:printf("A\n"); break;
+	case 2:printf("B\n"); break;
+	case 3:printf("C\n"); break;
+	default :printf("D\n");
+}
+
+#include<stdio.h>
+int main()
+{
+	int s=0;
+	int k=1;
+	while (k<=50)
+	{
+		s=s+k;
+		k=k+1;
+	}
+	printf("a=&d\n",s);
+	return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+	double a=0,s=0,b=1;
+	do
+	{
+		a=1/b;
+		s=s+a;
+		b++;
+	}
+		while (b<=7);
+	    printf("%lf",s);
+	return 0;
+}
